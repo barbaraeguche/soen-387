@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 public class ConfirmationServlet extends HttpServlet {
 	
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		HttpSession session = request.getSession();
 		// clear registrations after confirmation
 		session.setAttribute("registrations", null);

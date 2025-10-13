@@ -47,7 +47,7 @@ public class EventListingServlet extends HttpServlet {
 		
 		out.println("<div class='events-list'>");
 		out.println("<p>Choose the number of participants then click <b>Register</b>.</p>");
-		out.println("<div");
+		out.println("<div>");
 		
 		for (Event event : events) {
 			out.println("<div class='event-card'>");
@@ -76,7 +76,7 @@ public class EventListingServlet extends HttpServlet {
 			out.println("</div>");
 		}
 		
-		out.println("/<div");
+		out.println("</div");
 		out.println("</div>"); // .events-list
 		out.println("</div>"); // .container
 		out.println("</body>");
