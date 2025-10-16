@@ -20,22 +20,26 @@
 	<title>Warming</title>
 </head>
 <body>
-	<script>
-		alert("Warning: 0 participants entered. Registration not removed.");
-		window.location = "<%= request.getContextPath() %>/jsp/registrationSummary.jsp";
-	</script>
+				<script>
+					alert("Warning: 0 participants entered. Registration not removed.");
+					window.location = "<%= request.getContextPath() %>/jsp/registrationSummary.jsp";
+				</script>
 </body>
 </html>
 <%
 				return;
 			} else {
+				// update the number of participants
 				registrations.get(index).setNumOfParticipants(participants);
 			}
 		} else if (action.equals("cancel")) {
 			registrations.remove(index);
 		}
+		
+		// store updated registrations
 		session.setAttribute("registrations", registrations);
 	}
 	
+	// stay on the same page
 	response.sendRedirect("%s/jsp/registrationSummary.jsp".formatted(request.getContextPath()));
 %>

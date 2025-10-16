@@ -92,6 +92,7 @@ public class EventListingServlet extends HttpServlet {
 		@SuppressWarnings("unchecked")
 		List<Registration> registrations = (List<Registration>) session.getAttribute("registrations");
 		
+		// prevent null pointer error
 		if (registrations == null) {
 			registrations = new ArrayList<>();
 		}
@@ -108,12 +109,16 @@ public class EventListingServlet extends HttpServlet {
 				}
 			}
 			
+			// avoid duplicate events
 			if (!isRegistered) {
 				registrations.add(new Registration(event, participants));
 			}
+			
+			// store updated registrations
 			session.setAttribute("registrations", registrations);
 		}
 		
+		// stay on the same page
 		response.sendRedirect(request.getContextPath() + "/servlet/events");
 	}
 }

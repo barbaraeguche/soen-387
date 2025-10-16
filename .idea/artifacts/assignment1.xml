@@ -1,13 +1,13 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" build-on-make="true" name="assignment1">
-    <output-path>$PROJECT_DIR$/out/artifacts/assignment1</output-path>
+  <artifact type="exploded-war" name="assignment1">
+    <output-path>$PROJECT_DIR$/A1/target/A1-1.0-SNAPSHOT</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="A1" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="assignment-1/web/Web" />
+      <element id="javaee-facet-resources" facet="A1/web/Web" />
     </root>
   </artifact>
 </component>

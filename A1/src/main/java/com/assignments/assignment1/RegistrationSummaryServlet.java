@@ -72,8 +72,8 @@ public class RegistrationSummaryServlet extends HttpServlet {
 				out.println("</form>");
 				out.println("</td>");
 				
-				out.println("<td>" + reg.getEvent().getPricePerParticipant() + "</td>");
-				out.println("<td>" + reg.getTotalCost() + "</td>");
+				out.println("<td>$" + reg.getEvent().getPricePerParticipant() + "</td>");
+				out.println("<td>$" + reg.getTotalCost() + "</td>");
 				
 				// cancel form
 				out.println("<td>");
@@ -126,14 +126,18 @@ public class RegistrationSummaryServlet extends HttpServlet {
 					out.println("window.location='" + request.getContextPath() + "/servlet/registrations';</script>");
 					return;
 				} else {
+					// update the number of participants
 					registrations.get(index).setNumOfParticipants(participants);
 				}
 			} else if (action.equals("cancel")) {
 				registrations.remove(index);
 			}
+			
+			// store updated registrations
 			session.setAttribute("registrations", registrations);
 		}
 		
+		// stay on the same page
 		response.sendRedirect(request.getContextPath() + "/servlet/registrations");
 	}
 }

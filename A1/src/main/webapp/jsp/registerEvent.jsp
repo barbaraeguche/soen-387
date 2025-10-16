@@ -10,6 +10,8 @@
 	
 	@SuppressWarnings("unchecked")
 	List<Registration> registrations = (List<Registration>) session.getAttribute("registrations");
+	
+	// prevent null pointer error
 	if (registrations == null) {
 		registrations = new ArrayList<>();
 	}
@@ -26,11 +28,15 @@
 			}
 		}
 		
+		// avoid duplicate events
 		if (!isRegistered) {
 			registrations.add(new Registration(event, participants));
 		}
+		
+		// store updated registrations
 		session.setAttribute("registrations", registrations);
 	}
 	
+	// stay on the same page
 	response.sendRedirect("%s/jsp/eventListing.jsp".formatted(request.getContextPath()));
 %>

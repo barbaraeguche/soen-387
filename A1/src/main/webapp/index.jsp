@@ -3,6 +3,7 @@
 <html>
 <head>
 	<title>Event Registration System</title>
+	<link rel="stylesheet" href="<%= request.getContextPath() %>/css/home.css">
 </head>
 <body>
 	<div class="welcome-container">

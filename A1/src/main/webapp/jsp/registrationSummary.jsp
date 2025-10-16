@@ -64,8 +64,8 @@
 									</form>
 								</td>
 								
-								<td><%= reg.getEvent().getPricePerParticipant() %></td>
-								<td><%= reg.getTotalCost() %></td>
+								<td>$<%= reg.getEvent().getPricePerParticipant() %></td>
+								<td>$<%= reg.getTotalCost() %></td>
 								
 								<td>
 									<form

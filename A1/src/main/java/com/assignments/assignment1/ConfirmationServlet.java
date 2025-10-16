@@ -32,6 +32,7 @@ public class ConfirmationServlet extends HttpServlet {
 		out.println("<div class='confirmation-box'>");
 		out.println("<h1>Registration Confirmed!</h1>");
 		out.println("<p>Thank you --- your registrations have been recorded.</p>");
+		out.println("<p>An email confirmation is <i>not</i> required for this assignment.</p>");
 		out.println("<a href='" + request.getContextPath() + "/servlet/events' class='btn-home'>Back to Events</a>");
 		out.println("</div>"); // .container
 		out.println("</div>"); // .confirmation-box

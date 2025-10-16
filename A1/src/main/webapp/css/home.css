@@ -1,0 +1,92 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: linear-gradient(135deg, #e8dcc8 0%, #d4c4ad 100%);
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+.welcome-container {
+	background: #faf8f3;
+	border-radius: 20px;
+	padding: 60px;
+	box-shadow: 0 20px 60px rgba(92, 74, 58, 0.15);
+	text-align: center;
+	max-width: 600px;
+}
+
+h1 {
+	color: #5c4a3a;
+	font-size: 2.5em;
+	margin-bottom: 20px;
+}
+
+p {
+	color: #7a6a57;
+	font-size: 1.2em;
+	margin-bottom: 40px;
+}
+
+.version-buttons {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.version-btn {
+	background: linear-gradient(135deg, #a89175 0%, #8a7562 100%);
+	color: white;
+	padding: 20px 40px;
+	border-radius: 12px;
+	text-decoration: none;
+	font-size: 1.1em;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	box-shadow: 0 5px 15px rgba(168, 145, 117, 0.3);
+}
+
+.version-btn:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px rgba(168, 145, 117, 0.4);
+}
+
+.version-btn.jsp {
+	background: linear-gradient(135deg, #c9ab8e 0%, #b89a7e 100%);
+	box-shadow: 0 5px 15px rgba(201, 171, 142, 0.3);
+}
+
+.version-btn.jsp:hover {
+	box-shadow: 0 10px 25px rgba(201, 171, 142, 0.4);
+}
+
+.note {
+	margin-top: 30px;
+	padding: 20px;
+	background: #ffffff;
+	border-left: 4px solid #a89175;
+	border-radius: 8px;
+	text-align: left;
+}
+
+.note h3 {
+	color: #6b5444;
+	margin-bottom: 10px;
+}
+
+.note ul {
+	margin-left: 20px;
+	color: #7a6a57;
+}
+
+.note li {
+	margin: 5px 0;
+}
